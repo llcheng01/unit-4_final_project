@@ -1,0 +1,19 @@
+['population', 'householdsize','racepctblack', 'racePctWhite',
+'racePctAsian', 'racePctHisp', 'agePct12t21']
+
+def fillUnknown(x):
+    if x in '?':
+        return np.nan
+
+y = [10.0, '?', 20.0]
+list(map(y, fillUnknown))
+#
+def multiply(x):
+    return (x*x)
+def add(x):
+    return (x+x)
+
+funcs = [multiply, add]
+for i in range(5):
+    value = list(map(lambda x: x(i), funcs))
+    print(value)
