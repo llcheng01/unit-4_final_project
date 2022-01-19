@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  datascience-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - JUPYTER_TOKEN=unit-4
+    volumes:
+      - .:/nbs 
+    ports:
+      - 8888:8888
+    container_name: datascience-lab
